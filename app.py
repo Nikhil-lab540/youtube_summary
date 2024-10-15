@@ -39,17 +39,19 @@ def generate_gemini_content(transcript_text,prompt):
 
 
 
-# Function to hide Streamlit style
-def hide_streamlit_style():
-    hide_st_style = """
-        <style>
-        #MainMenu {visibility: hidden;}
-        footer {visibility: hidden;}
-        header {visibility: hidden;}
-        </style>
-    """
+hide_st_style = """
+            <style>
+            /* Hide Streamlit's default hamburger menu */
+            #MainMenu {visibility: hidden;}
+            
+            /* Hide Streamlit's footer (the "Made with Streamlit" footer) */
+            footer {visibility: hidden;}
+            
+            /* Hide Streamlit's "Deploy" button */
+            header {visibility: hidden;}
+            </style>
+            """
 st.markdown(hide_st_style, unsafe_allow_html=True)
-
 
 st.title("YouTube Transcript to Detailed Notes Converter")
 youtube_link = st.text_input("Enter YouTube Video Link:")
