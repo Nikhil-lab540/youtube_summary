@@ -1,3 +1,5 @@
+
+--upgrade pip
 youtube-transcript-api
 streamlit
 google-generativeai
